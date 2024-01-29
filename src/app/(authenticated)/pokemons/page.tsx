@@ -94,7 +94,7 @@ export default function Pokemons() {
     const newPokemons = await getPokemons(27, regionStartId)
 
     setPokemons(newPokemons)
-    setFilteredPokemons<Pokemon[]>([])
+    setFilteredPokemons([])
     setPokemonNotFound(false)
 
     setLoading(false)

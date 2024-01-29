@@ -34,6 +34,6 @@ export async function getPokemons(
 
     return pokemons
   } catch (error) {
-    throw new Error('Erro ao buscar os Pokémons: ' + error)
+    throw new Error('Error getting pokemons: ' + error)
   }
 }

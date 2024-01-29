@@ -22,6 +22,12 @@ interface Pokemon {
   }[]
 }
 
+interface PokemonsProps {
+  pokemons: Pokemon[]
+  regions: Record<string, { startId: number; endId: number }>
+  selectedRegion: string
+}
+
 interface RenderPokemonsProps
   extends Pick<PokemonsProps, 'pokemons' | 'regions' | 'selectedRegion'> {
   handleLoadMore: () => Promise<void>
