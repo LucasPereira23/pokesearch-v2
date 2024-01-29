@@ -1,24 +1,35 @@
 'use client'
 import Image from 'next/image'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
 
 import pokemon_logo from '../../../../../../public/pokemon-logo.png'
 
 export default function Header() {
-  const [isUserMenuOpen, setIsUserMenuOpen] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const [currentPath, setCurrentPath] = useState(null)
+  const [currentPath, setCurrentPath] = useState<string>(
+    window?.location?.pathname
+  )
+  const [isHeaderFixed, setIsHeaderFixed] = useState<boolean>(false)
+  const currentPage = usePathname()
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      setCurrentPath(window.location.pathname || '/')
+    setCurrentPath(currentPage || '/')
+  }, [currentPage])
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const isFixed = window.scrollY > 0
+      setIsHeaderFixed(isFixed)
+    }
+
+    window.addEventListener('scroll', handleScroll)
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
     }
   }, [])
-
-  const toggleUserMenu = () => {
-    setIsUserMenuOpen(!isUserMenuOpen)
-  }
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen)
@@ -33,17 +44,30 @@ export default function Header() {
     setCurrentPath(path)
   }
 
-  const isActive = (path: string) => {
-    return currentPath === path
-      ? 'bg-gray-900 text-white'
-      : 'text-gray-300 hover:bg-gray-700 hover:text-white'
+  const isActive = (path: string, long_path?: boolean) => {
+    if (long_path) {
+      return currentPath?.includes(path)
+        ? 'bg-gray-900 text-white'
+        : 'text-gray-300 hover:bg-gray-700 hover:text-white'
+    } else {
+      return currentPath === path
+        ? 'bg-gray-900 text-white'
+        : 'text-gray-300 hover:bg-gray-700 hover:text-white'
+    }
   }
+
+  const headerClass = `bg-[#000029] ${
+    isHeaderFixed
+      ? 'fixed top-0 w-full z-50 transition-all duration-300 ease-in-out shadow-xl'
+      : ''
+  }`
 
   return (
     <>
-      <nav className="bg-[#000029]">
+      <div className={`${isHeaderFixed ? ' mt-16 w-full' : ''}`}></div>
+      <nav className={headerClass}>
         <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-          <div className="relative flex h-16 items-center justify-between">
+          <div className="relative flex h-[64px] items-center justify-between">
             <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
               <button
                 type="button"
@@ -88,16 +112,9 @@ export default function Header() {
             </div>
             <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
               <div className="flex flex-shrink-0 items-center">
-                {/* <img
-                  className="h-8 w-auto"
-                  src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-                  alt="Your Company"
-                /> */}
-
                 <Image
                   src={pokemon_logo}
                   alt="Pokemon logo"
-                  // layout="responsive"
                   loading="lazy"
                   width={500}
                   height={234}
@@ -119,20 +136,21 @@ export default function Header() {
                   <Link
                     href="/pokemons"
                     className={`rounded-lg px-3 py-2 text-sm font-medium ${isActive(
-                      '/pokemons'
+                      '/pokemons',
+                      true
                     )}`}
                     onClick={() => changeCurrentPath('/pokemons')}
                   >
                     Pokemons
                   </Link>
                   <Link
-                    href="/maps"
+                    href="/regions"
                     className={`rounded-lg px-3 py-2 text-sm font-medium ${isActive(
-                      '/maps'
+                      '/regions'
                     )}`}
-                    onClick={() => changeCurrentPath('/maps')}
+                    onClick={() => changeCurrentPath('/regions')}
                   >
-                    Maps
+                    Regions
                   </Link>
                   <Link
                     href="/types"
@@ -172,13 +190,13 @@ export default function Header() {
                 Pokemons
               </Link>
               <Link
-                href="/maps"
+                href="/regions"
                 className={`text-white block rounded-lg px-3 py-2 text-base font-medium ${isActive(
-                  '/maps'
+                  '/regions'
                 )}`}
-                onClick={() => closeMobileMenuRedirect('/maps')}
+                onClick={() => closeMobileMenuRedirect('/regions')}
               >
-                Maps
+                Regions
               </Link>
               <Link
                 href="/types"

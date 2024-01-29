@@ -1,36 +1,65 @@
+import Image from 'next/image'
+import Link from 'next/link'
+
+import pokemon_logo from '../../../../../../public/pokemon-logo.png'
+
 export default function Footer() {
   return (
     <>
-      <footer className="mt-4 bg-[#000029] shadow">
+      <footer className=" bg-[#000029] shadow">
         <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
-          <div className="sm:flex sm:items-center sm:justify-center">
-            <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-400 sm:mb-0 dark:text-gray-400">
+          <div className="flex flex-col gap-6 items-center justify-center">
+            <Image
+              src={pokemon_logo}
+              alt="Pokemon logo"
+              // layout="responsive"
+              loading="lazy"
+              width={500}
+              height={234}
+              className="h-10 w-auto"
+            />
+            <ul className="flex flex-wrap gap-2 justify-center items-center text-sm font-medium text-gray-400 sm:mb-0 dark:text-gray-400">
               <li>
-                <a href="#" className="hover:underline me-4 md:me-6">
-                  About
-                </a>
+                <Link
+                  href="/"
+                  className="rounded-lg px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white "
+                >
+                  Home
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:underline me-4 md:me-6">
-                  Privacy Policy
-                </a>
+                <Link
+                  href="/pokemons"
+                  className="rounded-lg px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white "
+                >
+                  Pokemons
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:underline me-4 md:me-6">
-                  Licensing
-                </a>
+                <Link
+                  href="/regions"
+                  className="rounded-lg px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white "
+                >
+                  Regions
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:underline">
-                  Contact
-                </a>
+                <Link
+                  href="/regions"
+                  className="rounded-lg px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white "
+                >
+                  Types
+                </Link>
               </li>
             </ul>
           </div>
-          <hr className="my-6 sm:mx-auto border-gray-700 lg:my-8" />
-          <span className="block text-sm text-gray-400 sm:text-center">
+          <hr className="my-4 sm:mx-auto border-gray-700 lg:my-6" />
+          <span className="block text-sm text-gray-400 text-center">
             Made by{' '}
-            <a href="https://flowbite.com/" className="hover:underline">
+            <a
+              href="https://lucaspereira.vercel.app/"
+              className="hover:underline"
+            >
               Lucas Pereira
             </a>
           </span>

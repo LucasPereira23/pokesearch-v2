@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import Image from 'next/image'
 import Link from 'next/link'
+import { Key } from 'react'
 
 import {
   PokemonType,
@@ -21,32 +22,35 @@ interface Pokemon {
   }[]
 }
 
-interface RenderPokemonsProps {
-  pokemons: Pokemon[]
-  regions: Record<string, Region>
-  selectedRegion: string
+interface RenderPokemonsProps
+  extends Pick<PokemonsProps, 'pokemons' | 'regions' | 'selectedRegion'> {
+  handleLoadMore: () => Promise<void>
+  loading: boolean
+  filtered: boolean
 }
 
 const RenderPokemons: React.FC<RenderPokemonsProps> = ({
   pokemons,
   regions,
-  selectedRegion
+  selectedRegion,
+  handleLoadMore,
+  loading,
+  filtered
 }) => {
-  const selectedRegionData = regions[selectedRegion]
+  const { startId, endId } = regions[selectedRegion] || {}
+  const filteredPokemons = pokemons.filter(
+    (pokemon: Pokemon) => pokemon.id >= startId && pokemon.id <= endId
+  )
 
-  const filteredPokemons = pokemons.filter((pokemon) => {
-    const regionStartId = selectedRegionData?.startId
-    const regionEndId = selectedRegionData?.endId
-    return pokemon.id >= regionStartId && pokemon.id <= regionEndId
-  })
+  const canLoadMore =
+    filteredPokemons.length > 0 && filteredPokemons.length % 27 === 0
 
   return (
     <>
       {filteredPokemons?.length > 0 ? (
-        filteredPokemons.map((pokemon) => {
-          const typeImage =
-            typeImages[pokemon.types[0].type.name as PokemonType]
-          const imageSrc = typeImage ? typeImage : defaultImage
+        filteredPokemons.map((pokemon: Pokemon) => {
+          const imageSrc =
+            typeImages[pokemon.types[0]?.type.name] || defaultImage
 
           return (
             <Link
@@ -79,28 +83,56 @@ const RenderPokemons: React.FC<RenderPokemonsProps> = ({
                       {`${pokemon.name} #${pokemon.id}`}
                     </h2>
                     <div className="flex justify-start items-center">
-                      {pokemon.types.map((typeData, index) => (
-                        <div
-                          key={index}
-                          className={`bg-type-${typeData.type.name} bg-black-700 text-white text-sm leading-tight mr-2 capitalize px-2 py-1 rounded-lg`}
-                        >
-                          {typeData.type.name.charAt(0).toUpperCase() +
-                            typeData.type.name.slice(1)}
-                        </div>
-                      ))}
+                      {pokemon.types.map(
+                        (
+                          typeData: { type: { name: string } },
+                          index: Key | null | undefined
+                        ) => (
+                          <div
+                            key={index}
+                            className={`bg-type-${typeData.type.name} bg-black-700 text-white text-sm leading-tight mr-2 capitalize px-2 py-1 rounded-lg`}
+                          >
+                            {typeData.type.name.charAt(0).toUpperCase() +
+                              typeData.type.name.slice(1)}
+                          </div>
+                        )
+                      )}
                     </div>
-                    <div className="flex justify-between items-center"></div>
                   </div>
                 </div>
               </div>
             </Link>
           )
         })
+      ) : loading ? (
+        <div className="my-48 border-gray-300 h-12 w-12 animate-spin rounded-full border-4 border-t-[#CE312F]" />
       ) : (
         <>
           <h1 className="text-3xl text-red-500 my-48 mx-auto">
             Pokemon not found in this region
           </h1>
+        </>
+      )}
+      {!filtered && filteredPokemons?.length > 0 && canLoadMore && (
+        <>
+          <div className="flex min-w-full justify-center mt-4">
+            <button
+              onClick={handleLoadMore}
+              className={`bg-[#CE312F] ${
+                loading ? 'text-[#CE312F]' : 'text-white'
+              } px-6 py-2 rounded-md hover:opacity-90 relative ${
+                loading ? 'opacity-70 cursor-not-allowed' : ''
+              }`}
+              disabled={loading}
+            >
+              {loading && (
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="border-white h-6 w-6 animate-spin rounded-full border-4 border-t-[#CE312F]" />
+                </div>
+              )}
+              Load more
+            </button>
+          </div>
         </>
       )}
     </>
