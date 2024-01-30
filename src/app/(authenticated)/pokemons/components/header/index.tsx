@@ -110,14 +110,16 @@ export default function Header() {
             </div>
             <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
               <div className="flex flex-shrink-0 items-center">
-                <Image
-                  src={pokemon_logo}
-                  alt="Pokemon logo"
-                  loading="lazy"
-                  width={500}
-                  height={234}
-                  className="h-10 w-auto"
-                />
+                <Link href="/">
+                  <Image
+                    src={pokemon_logo}
+                    alt="Pokemon logo"
+                    loading="lazy"
+                    width={500}
+                    height={234}
+                    className="h-10 w-auto"
+                  />
+                </Link>
               </div>
               <div className="hidden sm:ml-6 sm:flex justify-center items-center">
                 <div className="flex space-x-4">

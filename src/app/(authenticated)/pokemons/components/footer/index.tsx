@@ -9,15 +9,18 @@ export default function Footer() {
       <footer className=" bg-[#000029] shadow">
         <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
           <div className="flex flex-col gap-6 items-center justify-center">
-            <Image
-              src={pokemon_logo}
-              alt="Pokemon logo"
-              // layout="responsive"
-              loading="lazy"
-              width={500}
-              height={234}
-              className="h-10 w-auto"
-            />
+            <Link href="/">
+              <Image
+                src={pokemon_logo}
+                alt="Pokemon logo"
+                // layout="responsive"
+                loading="lazy"
+                width={500}
+                height={234}
+                className="h-10 w-auto"
+              />
+            </Link>
+
             <ul className="flex flex-wrap gap-2 justify-center items-center text-sm font-medium text-gray-400 sm:mb-0 dark:text-gray-400">
               <li>
                 <Link
