@@ -64,7 +64,7 @@ export default function Home() {
                         alt="Regions"
                         width={48}
                         height={48}
-                        className=""
+                        loading="lazy"
                       />
                     </div>
                     <h6 className="text-xl font-semibold">Regions</h6>
@@ -88,7 +88,7 @@ export default function Home() {
                         alt="Psyduck"
                         width={48}
                         height={48}
-                        className=""
+                        loading="lazy"
                       />
                     </div>
                     <h6 className="text-xl font-semibold">Pokémons</h6>
@@ -157,6 +157,7 @@ export default function Home() {
                     width={1920}
                     height={1080}
                     className="aspect-3_2 w-full object-cover align-middle rounded-lg"
+                    loading="lazy"
                   />
                 </div>
               </div>
@@ -171,6 +172,7 @@ export default function Home() {
                     width={1920}
                     height={1080}
                     className="aspect-3_2 w-full object-cover align-middle rounded-lg"
+                    loading="lazy"
                   />
                 </div>
               </div>
@@ -212,7 +214,7 @@ export default function Home() {
                     alt="Logo Pokémon"
                     width={48}
                     height={48}
-                    className=""
+                    loading="lazy"
                   />
                 </div>
                 <h6 className="text-xl mt-5 font-semibold text-gray-800">
@@ -231,7 +233,7 @@ export default function Home() {
                     alt="Logo Pokémon"
                     width={48}
                     height={48}
-                    className=""
+                    loading="lazy"
                   />
                 </div>
                 <h5 className="text-xl mt-5 font-semibold text-gray-800">
@@ -250,7 +252,7 @@ export default function Home() {
                     alt="Logo Pokémon"
                     width={48}
                     height={48}
-                    className=""
+                    loading="lazy"
                   />
                 </div>
                 <h5 className="text-xl mt-5 font-semibold text-gray-800">
@@ -270,7 +272,7 @@ export default function Home() {
                     alt="Logo Pokémon"
                     width={48}
                     height={48}
-                    className=""
+                    loading="lazy"
                   />
                 </div>
                 <h5 className="text-xl mt-5 font-semibold text-gray-800">

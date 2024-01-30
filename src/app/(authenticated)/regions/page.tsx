@@ -108,6 +108,7 @@ export default function Regions() {
                     width={1920}
                     height={1080}
                     className="aspect-3_2 w-full object-cover align-middle rounded-lg"
+                    loading="lazy"
                   />
                 </div>
               </div>
@@ -122,6 +123,7 @@ export default function Regions() {
                     width={1920}
                     height={1080}
                     className="aspect-3_2 w-full object-cover align-middle rounded-lg"
+                    loading="lazy"
                   />
                 </div>
               </div>
@@ -167,6 +169,7 @@ export default function Regions() {
                     width={1920}
                     height={1080}
                     className="aspect-3_2 w-full object-cover align-middle rounded-lg"
+                    loading="lazy"
                   />
                 </div>
               </div>
@@ -181,6 +184,7 @@ export default function Regions() {
                     width={1920}
                     height={1080}
                     className="aspect-3_2 w-full object-cover align-middle rounded-lg"
+                    loading="lazy"
                   />
                 </div>
               </div>
@@ -226,6 +230,7 @@ export default function Regions() {
                     width={1920}
                     height={1080}
                     className="aspect-3_2 w-full object-cover align-middle rounded-lg"
+                    loading="lazy"
                   />
                 </div>
               </div>
@@ -240,6 +245,7 @@ export default function Regions() {
                     width={1920}
                     height={1080}
                     className="aspect-3_2 w-full object-cover align-middle rounded-lg"
+                    loading="lazy"
                   />
                 </div>
               </div>
@@ -285,6 +291,7 @@ export default function Regions() {
                     width={1920}
                     height={1080}
                     className="aspect-3_2 w-full object-cover align-middle rounded-lg"
+                    loading="lazy"
                   />
                 </div>
               </div>
@@ -299,6 +306,7 @@ export default function Regions() {
                     width={1920}
                     height={1080}
                     className="aspect-3_2 w-full object-cover align-middle rounded-lg"
+                    loading="lazy"
                   />
                 </div>
               </div>
