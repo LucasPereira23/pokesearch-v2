@@ -8,9 +8,7 @@ import pokemon_logo from '../../../../../../public/pokemon-logo.png'
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const [currentPath, setCurrentPath] = useState<string>(
-    window?.location?.pathname
-  )
+  const [currentPath, setCurrentPath] = useState<string>(usePathname())
   const [isHeaderFixed, setIsHeaderFixed] = useState<boolean>(false)
   const currentPage = usePathname()
 
