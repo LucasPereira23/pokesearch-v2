@@ -113,7 +113,7 @@ export default function Types() {
 
             <div className="flex flex-col-reverse lg:flex-row items-center mt-4 lg:mt-16">
               <div className="w-full md:max-w-[600px] px-4 mr-auto ml-auto">
-                <div className="relative flex flex-col min-w-0 break-words bg-[#FBA64C] w-full mb-6 shadow-lg rounded-lg p-8">
+                <div className="relative flex flex-col min-w-0 break-words bg-[#FBA64C] w-full mt-4 lg:mt-0 mb-6 shadow-lg rounded-lg p-8">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 512 512"
@@ -200,7 +200,7 @@ export default function Types() {
 
             <div className="flex flex-col-reverse lg:flex-row items-center mt-4 lg:mt-16">
               <div className="w-full md:max-w-[600px] px-4 mr-auto ml-auto">
-                <div className="relative flex flex-col min-w-0 break-words bg-[#F3D153] w-full mb-6 shadow-lg rounded-lg p-8">
+                <div className="relative flex flex-col min-w-0 break-words bg-[#F3D153] w-full mt-4 lg:mt-0 mb-6 shadow-lg rounded-lg p-8">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 512 512"
@@ -287,7 +287,7 @@ export default function Types() {
 
             <div className="flex flex-col-reverse lg:flex-row items-center mt-4 lg:mt-16">
               <div className="w-full md:max-w-[600px] px-4 mr-auto ml-auto">
-                <div className="relative flex flex-col min-w-0 break-words bg-[#7BCBE2] w-full mb-6 shadow-lg rounded-lg p-8">
+                <div className="relative flex flex-col min-w-0 break-words bg-[#7BCBE2] w-full mt-4 lg:mt-0 mb-6 shadow-lg rounded-lg p-8">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 512 512"
@@ -406,7 +406,7 @@ export default function Types() {
 
             <div className="flex flex-col-reverse lg:flex-row items-center mt-4 lg:mt-16">
               <div className="w-full md:max-w-[600px] px-4 mr-auto ml-auto">
-                <div className="relative flex flex-col min-w-0 break-words bg-[#7D57A0] w-full mb-6 shadow-lg rounded-lg p-8">
+                <div className="relative flex flex-col min-w-0 break-words bg-[#7D57A0] w-full mt-4 lg:mt-0 mb-6 shadow-lg rounded-lg p-8">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 512 512"
@@ -494,7 +494,7 @@ export default function Types() {
 
             <div className="flex flex-col-reverse lg:flex-row items-center mt-4 lg:mt-16">
               <div className="w-full md:max-w-[600px] px-4 mr-auto ml-auto">
-                <div className="relative flex flex-col min-w-0 break-words bg-[#A1ACDA] w-full mb-6 shadow-lg rounded-lg p-8">
+                <div className="relative flex flex-col min-w-0 break-words bg-[#A1ACDA] w-full mt-4 lg:mt-0 mb-6 shadow-lg rounded-lg p-8">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 512 512"
@@ -581,7 +581,7 @@ export default function Types() {
 
             <div className="flex flex-col-reverse lg:flex-row items-center mt-4 lg:mt-16">
               <div className="w-full md:max-w-[600px] px-4 mr-auto ml-auto">
-                <div className="relative flex flex-col min-w-0 break-words bg-[#4D4844] w-full mb-6 shadow-lg rounded-lg p-8">
+                <div className="relative flex flex-col min-w-0 break-words bg-[#4D4844] w-full mt-4 lg:mt-0 mb-6 shadow-lg rounded-lg p-8">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 512 512"
@@ -670,7 +670,7 @@ export default function Types() {
 
             <div className="flex flex-col-reverse lg:flex-row items-center mt-4 lg:mt-16">
               <div className="w-full md:max-w-[600px] px-4 mr-auto ml-auto">
-                <div className="relative flex flex-col min-w-0 break-words bg-[#B8B9CE] w-full mb-6 shadow-lg rounded-lg p-8">
+                <div className="relative flex flex-col min-w-0 break-words bg-[#B8B9CE] w-full mt-4 lg:mt-0 mb-6 shadow-lg rounded-lg p-8">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 512 512"
@@ -758,7 +758,7 @@ export default function Types() {
 
             <div className="flex flex-col-reverse lg:flex-row items-center mt-4 lg:mt-16">
               <div className="w-full md:max-w-[600px] px-4 mr-auto ml-auto">
-                <div className="relative flex flex-col min-w-0 break-words bg-[#E66289] w-full mb-6 shadow-lg rounded-lg p-8">
+                <div className="relative flex flex-col min-w-0 break-words bg-[#E66289] w-full mt-4 lg:mt-0 mb-6 shadow-lg rounded-lg p-8">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 512 512"
@@ -845,7 +845,7 @@ export default function Types() {
 
             <div className="flex flex-col-reverse lg:flex-row items-center mt-4 lg:mt-16">
               <div className="w-full md:max-w-[600px] px-4 mr-auto ml-auto">
-                <div className="relative flex flex-col min-w-0 break-words bg-[#DFB8D7] w-full mb-6 shadow-lg rounded-lg p-8">
+                <div className="relative flex flex-col min-w-0 break-words bg-[#DFB8D7] w-full mt-4 lg:mt-0 mb-6 shadow-lg rounded-lg p-8">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 512 512"
