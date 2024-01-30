@@ -2,7 +2,6 @@
 import type { Metadata } from 'next'
 import { Poppins } from 'next/font/google'
 import '../styles/globals.css'
-
 import NextTopLoader from 'nextjs-toploader'
 
 import Footer from './pokemons/components/footer'

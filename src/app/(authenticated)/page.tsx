@@ -198,9 +198,9 @@ export default function Home() {
                 </h2>
                 <p className="text-sm sm:text-lg leading-relaxed mt-4 mb-4 text-gray-500">
                   Harnessing the power of the latest and most advanced
-                  technologies, I've crafted a solid and visually stunning
+                  technologies, I´ve crafted a solid and visually stunning
                   experience for you. This project stands as a testament of what
-                  I'm able to do
+                  I´m able to do
                 </p>
               </div>
             </div>

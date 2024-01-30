@@ -47,4 +47,17 @@ export const typeImages: Record<PokemonType, StaticImageData> = {
   // [PokemonType.STELLAR]: stellar
 }
 
+export interface Pokemon {
+  id: number
+  name: string
+  sprites: {
+    front_default?: string
+  }
+  types: {
+    type: {
+      name: PokemonType
+    }
+  }[]
+}
+
 export const defaultImage: StaticImageData = grass

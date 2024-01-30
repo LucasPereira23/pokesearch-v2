@@ -1,15 +1,11 @@
 'use client'
 import { useEffect, useState } from 'react'
 
-import RenderPokemons from './components/render-pokemons/index' // Update the path accordingly
+import RenderPokemons from './components/render-pokemons/index'
 
+import { Pokemon } from '../pokemons/apirequests/pokemon-image-type'
 import { getPokemonDetails } from './apirequests/get-pokemon-by-name'
 import { getPokemons } from './apirequests/get-pokemons'
-
-interface Pokemon {
-  id: number
-  name: string
-}
 
 interface Region {
   name: string

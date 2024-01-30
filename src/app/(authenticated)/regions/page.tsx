@@ -92,7 +92,7 @@ export default function Regions() {
                 <p className="text-sm lg:text-lg font-light leading-relaxed mb-4 text-gray-800">
                   The Kanto region is the birthplace of the Pokémon adventure,
                   featuring iconic cities such as Pallet Town and Cerulean City.
-                  Trainers embark on their journey from Professor Oak's lab,
+                  Trainers embark on their journey from Professor Oak´s lab,
                   encountering classic Pokémon like Pikachu and Charmander.
                   Kanto is known for its diverse landscapes, from the dense
                   Viridian Forest to the volcanic Mt. Moon, providing a rich
@@ -155,7 +155,7 @@ export default function Regions() {
                   navigate through a variety of terrains. Hoenn introduces
                   unique features like Pokémon Contests and the Battle Frontier,
                   enhancing the overall gameplay experience and showcasing the
-                  region's distinct charm.
+                  region´s distinct charm.
                 </p>
               </div>
 
@@ -194,9 +194,9 @@ export default function Regions() {
                   Sinnoh is marked by its picturesque landscapes and ancient
                   history. With cities like Jubilife and Veilstone, trainers
                   explore the Great Marsh and challenge the Pokémon League at
-                  the Spear Pillar. The mythology surrounding Sinnoh's legendary
+                  the Spear Pillar. The mythology surrounding Sinnoh´s legendary
                   Pokémon, Dialga, Palkia, and Giratina, adds an intriguing
-                  dimension to the region's narrative, making it a memorable
+                  dimension to the region´s narrative, making it a memorable
                   adventure for trainers.
                 </p>
               </div>
@@ -270,7 +270,7 @@ export default function Regions() {
                   Alola, a tropical paradise inspired by Hawaii, introduces the
                   concept of regional forms and the Alolan Pokémon League. With
                   unique trial challenges replacing traditional gyms, trainers
-                  explore the islands of Melemele and Akala. The region's
+                  explore the islands of Melemele and Akala. The region´s
                   cultural influence is evident in its laid-back atmosphere,
                   diverse wildlife, and the guardian deities, adding a
                   refreshing twist to the traditional Pokémon journey.
